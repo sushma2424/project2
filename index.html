@@ -16,57 +16,54 @@
 <div class = "container">
     <div class = "main-video">
         <div class = "video">
-            <video src = "C:\Users\sushma\Desktop\another\Record_2023-05-25-22-59-48.mp4" controls muted autoplay></video>
+            <iframe src="https://drive.google.com/file/d/1-OB-AhG3KgbE-V5NTRQ1BOyPfxzKaYde/preview" width="640" height="480" allow="autoplay"></iframe>
             <h3 class = "title">01. video title goes here</h3>
         </div>
     </div>
 
     <div class = "video-list">
         <div class = "vid active">
-            <video src = "C:\Users\sushma\Desktop\another\Record_2023-05-25-23-00-09.mp4" muted autoplay></video>
+            <iframe src="https://drive.google.com/file/d/1vgNj3xMopn6adJoiIZ80pMG4mK6u7ahA/preview" width="640" height="480" allow="autoplay"></iframe>
             <h3 class = "title">02. video title goes here</h3>
         </div>
 
         <div class = "vid">
-            <video src = "C:\Users\sushma\Desktop\another\Record_2023-05-25-23-07-50.mp4" muted autoplay></video>
+            <iframe src="https://drive.google.com/file/d/1UdTikHi5VNZmoN9hwyaKOzf11XxnGbWV/preview" width="640" height="480" allow="autoplay"></iframe>
             <h3 class = "title">03. video title goes here</h3>
         </div>
 
 
         <div class = "vid">
-            <video src = "C:\Users\sushma\Desktop\another\Record_2023-05-25-23-07-50.mp4" muted autoplay></video>
+            <iframe src="https://drive.google.com/file/d/1kMqbegZ9Wz4A_DqazmyBL9gwKQGAUfMX/preview" width="640" height="480" allow="autoplay"></iframe>
             <h3 class = "title">04. video title goes here</h3>
         </div>
 
 
-
-
     </div>
-
-
-
 
 
 </div>
 
 <script>
     let listVideo = document.querySelectorAll(".video-list .vid");
-    let mainVideo = document.querySelector(".main-video video");
+    let mainVideo = document.querySelector(".main-video iframe");
     let title = document.querySelector('.main-video .title');
     
-    listVideo.forEach(video => {
-        video.onclick = () => {
+    listVideo.forEach(iframe => {
+        iframe.onclick = () => {
         listVideo.forEach(vid => vid.classList.remove("active"));
-        video.classList.add('active');
-        if (video.classList.contains('active')) {
-            let src = video.children[0].getAttribute('src');
+        iframe.classList.add('active');
+        if (iframe.classList.contains('active')) {
+            let src = iframe.children[0].getAttribute('src');
             mainVideo.src = src;
-            let text = video.children[1].innerHTML;
+            let text = iframe.children[1].innerHTML;
             title.innerHTML = text;
         };
         };
     });
 </script>
+
+<p>Please Make sure that switch to the higher quality</p>
 
 </body>
 </html>
